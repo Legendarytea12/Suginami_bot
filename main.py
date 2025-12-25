@@ -5,6 +5,10 @@ from core.bot import SuginamiBot
 import discord
 
 intents = discord.Intents.default()
-bot = SuginamiBot(command_prefix="!", intents=intents)
+intents.message_content = True
+intents.members = True
 
-bot.run(BOT_TOKEN)
+bot = SuginamiBot(intents=intents)
+
+if __name__ == "__main__":
+    bot.run(BOT_TOKEN)
