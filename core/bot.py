@@ -27,7 +27,7 @@ class SuginamiBot(commands.Bot):
             intents.members = True
         
         super().__init__(
-            command_prefix='/',
+            command_prefix='!',
             intents=intents,
             help_command=None
         )
